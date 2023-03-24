@@ -4,9 +4,15 @@
  
  git log aefea
 
+
+
  aefead2207ef7e2aa5dc81a34aedf0cad4c32545
 
+
+
  git log aefead2207ef7e2aa5dc81a34aedf0cad4c32545
+
+
 
  Update CHANGELOG.md
 
@@ -17,17 +23,22 @@
  git show -s --oneline 85024d3
  
  git log --oneline 85024d3
+
+
  
  85024d3100 (tag: v0.12.23) v0.12.23
 
 
  b. Сколько родителей у коммита b8d720? Напишите их хеши.
 
+
  git show --pretty b8d720 
  
  git show 56cd7859e0
  
  git show 9ea88f22fc 
+
+
 
  Два
  
@@ -36,7 +47,9 @@
 
  c.Перечислите хеши и комментарии всех коммитов, которые были сделаны между тегами v0.12.23 и v0.12.24.
 
+
  git log --oneline v0.12.23..v0.12.24
+
  
 33ff1c03bb (HEAD, tag: v0.12.24) v0.12.24
 
@@ -58,17 +71,27 @@ dd01a35078 Update CHANGELOG.md
  
 225466bc3e Cleanup after v0.12.23 release
  
+
  d.Найдите коммит, в котором была создана функция func providerSource, её определение в коде выглядит так: func providerSource(...) (вместо троеточия перечислены аргументы).
+
 
  git log -S"func providerSource("
 
+
+
  8c928e835
 
+
+
  e.Найдите все коммиты, в которых была изменена функция globalPluginDirs.
+
+
 
  git grep "globalPluginDirs"
  
  git log -s -L :globalPluginDirs:plugins.go
+
+
 
 52dbf94834 keep .terraform.d/plugins for discovery
 
@@ -78,11 +101,17 @@ dd01a35078 Update CHANGELOG.md
 
 8364383c35 Push plugin discovery down into command package
 
+
+
  f.Кто автор функции synchronizedWriters?
+
+
 
  git log -S "func synchronizedWriters("
  
  git show 5ac311e2a91e381e2f52234668b49ba670aa0f
+
+
 
 Martin Atkins <mart@degeneration.co.uk>
 
